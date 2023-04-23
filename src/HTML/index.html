@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Game</title>
+		<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+	</head>
+	<body>
+		<section>
+			<canvas id="main_canvas" width="0px" height="0px"></canvas>
+		</section>
+
+		<section>
+			<input id="file_input" type="file" accept="image/png, image/jpeg" value="">
+			<input id="background_color_input" type="color" value="#000000"></input>
+			<div id = "background_color_tooltip" class="tooltip">Background Color
+				<span class="tooltiptext">Changes the background color. This is the color of the background behind the image.</span>
+			</div>
+		</section>
+		
+		<section>
+			<input id="column_input" type="number" value="4"></input>
+			<div id = "invert_controls_tooltip" class="tooltip">Columns
+				<span class="tooltiptext">Changes the number of columns. Bigger number = more difficult.</span>
+			</div>
+
+			<input id="row_input" type="number" value="4"></input>
+			<div id = "invert_controls_tooltip" class="tooltip">Rows
+				<span class="tooltiptext">Changes the number of rows. Bigger number = more difficult.</span>
+			</div>
+		</section>
+		
+		<section>
+			<input id="num_display_input" type="checkbox"></input>
+			<div id = "num_display_tooltip" class="tooltip">Display Numbers?
+				<span class="tooltiptext">Displays square numbers. Squares are numbered in order left to right, top to bottom, starting from the top-left square.</span>
+			</div>
+
+			<input id="num_size_input" type="number" value="15"></input>
+			<div id = "num_size_tooltip" class="tooltip">Number Size
+				<span class="tooltiptext">Changes the text size of the square numbers.</span>
+			</div>
+
+			<input id="num_color_input" type="color" value="#000000"></input>
+			<div id = "num_color_tooltip" class="tooltip">Number Color
+				<span class="tooltiptext">Changes the text color of the square numbers.</span>
+			</div>
+		</section>
+		
+		<section>
+			<input id="outline_display_input" type="checkbox"></input>
+			<div id = "outline_display_tooltip" class="tooltip">Display Outlines?
+				<span class="tooltiptext">Displays square outlines. Squares will be highlighted when they are in the correct position.</span>
+			</div>
+
+			<input id="outline_size_input" type="number" value="2"></input>
+			<div id = "outline_size_tooltip" class="tooltip">Outline Size
+				<span class="tooltiptext">Changes the outline tickness of the square outlines.</span>
+			</div>
+
+			<input id="outline_color_input" type="color" value="#000000"></input>
+			<div id = "outline_color_tooltip" class="tooltip">Outline Color
+				<span class="tooltiptext">Changes the outline color of the square outlines.</span>
+			</div>
+		</section>
+		
+		<section>
+			<input id="invert_controls_input" type="checkbox"></input>
+			<div id = "invert_controls_tooltip" class="tooltip">Invert controls?
+				<span class="tooltiptext">Default is "w" and "i" = up, "s" and "k" = down, "a" and "j" = left, "d" and "l" = right. Toggling this will invert controls. Check this if movement feels backwerds.</span>
+			</div>
+
+			<input id="hint_input" type="checkbox"></input>
+			<div id = "hint_tooltip" class="tooltip">Show Hint?
+				<span class="tooltiptext">Check this to display the completed image. Shortcut: hold shift to display image.</span>
+			</div>
+
+			<input id="random_empty_input" type="checkbox"></input>
+			<div id = "random_tooltip" class="tooltip">Radomize the location of the empty box?
+				<span class="tooltiptext">Randomizes the location of the empty square. Default is the bottom right square.</span>
+			</div>
+		</section>
+		
+		<section>
+			<button id="save_button" type="button">Save Settings</button>
+			<button id="load_button" type="button">Load Settings</button>
+			<button id="shuffle_button" type="button">Shuffle</button>
+		</section>
+
+        <script src="./Game.js"></script>
+    </body>
+</html>
