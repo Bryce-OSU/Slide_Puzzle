@@ -48,16 +48,6 @@ class GameobjectManager
 
     RemoveDead()
     {
-        // for (auto i = gameObjects_.begin(); i != gameObjects_.end(); )
-        // {
-        //     if ((*i)->IsDead() && (*i)->GetTag() != "Player")
-        //     {
-        //         delete *i;
-        //         i = gameObjects_.erase(i);
-        //     }
-        //     else i++;
-        // }
-
         for (var i = 0; i < this.gameobjects_.length; )
         {
             if (this.gameobjects_[i].Dead) 
@@ -107,7 +97,7 @@ class GameobjectManager
     }
 
     Clear()
-    {
+    {//Removes all objects
         for (var i = 0; i < this.gameobjects_.length; i++)
         {
             this.gameobjects_[i].Deconstructor();

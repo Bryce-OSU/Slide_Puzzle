@@ -1,13 +1,10 @@
 import { Game } from "./Game";
-import { MyMath } from "./MyMath";
 import { Vector } from "./Vector";
 
 const game_: Game = new Game(); //Scene manager
-const math_: MyMath = new MyMath();
 
 //Main canvas, will be used to draw other canvas (like views) - setup in the html file - required
 const main_canvas_: HTMLCanvasElement = <HTMLCanvasElement>$("main_canvas");
-// const canvasSize: Vector = math_.GetCanvasScale(new Vector(16, 9));
 const canvasSize: Vector = new Vector(540, 360);
 main_canvas_.width = canvasSize.x;
 main_canvas_.height = canvasSize.y;
@@ -24,7 +21,6 @@ function Main()
         main_ctx_.fillRect(0, 0, main_canvas_.getBoundingClientRect().width, main_canvas_.getBoundingClientRect().height); //clear the canvas and fill it with black
         game_.Draw(main_ctx_);
     }
-    //var t = setTimeout(Main, 16);
     window.requestAnimationFrame(Main);
 }
 

@@ -8,9 +8,11 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "process": "^0.11.10",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
     "webpack": "^5.68.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "zeromq": "^5.3.1"
   }
 }
